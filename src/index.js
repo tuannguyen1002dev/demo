@@ -1,10 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './App/index';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import PageNotFound from './App/PageNotFound'
+
+import './styles/base/PageNotFound.css'
 
 ReactDOM.render(
+
   <React.StrictMode>
     <App />
   </React.StrictMode>,

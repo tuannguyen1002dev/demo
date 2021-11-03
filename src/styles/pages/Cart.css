@@ -1,0 +1,17 @@
+#cartItem {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+
+#cartItem td,
+#cartItem th, #cartItem tr {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.price {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+}
