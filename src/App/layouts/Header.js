@@ -9,25 +9,12 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
 import { makeStyles } from '@mui/styles';
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Divider from '@mui/material/Divider';
-import MenuItem from '@mui/material/MenuItem';
-import Menu from '@mui/material/Menu';
-import AccountCircle from '@mui/icons-material/AccountCircle';
 import Dialog from '@mui/material/Dialog';
-import DialogTitle from '@mui/material/DialogTitle';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
 
 import CloseIcon from '@mui/icons-material/Close';
@@ -243,7 +230,7 @@ export default function Header() {
                         </Grid>
                       </React.Fragment>
                     }>
-                    <ListItem>
+                    <ListItem sx={{m:0, p:0}}>
                       <Typography className={classes.menuFont} variant="body1" component="a" href="./products">
                         SẢN PHẨM
                       </Typography>

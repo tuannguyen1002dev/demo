@@ -7,29 +7,17 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
 import { makeStyles } from '@mui/styles';
 import Divider from '@mui/material/Divider';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import SwipeableViews from 'react-swipeable-views';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import TextField from '@mui/material/TextField';
-import Input from '@mui/material/Input';
 import Chip from '@mui/material/Chip';
-import Stack from '@mui/material/Stack';
 
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 import NewProductCardList from '../components/NewProductCardList';
 import MediaList from '../components/MediaList';
@@ -317,7 +305,7 @@ export default function Home() {
         <Container maxWidth>
           <Container maxWidth="md">
             <Grid mt={5} container direction="row" justifyContent="space-between" alignItems="center">
-              <Grid item xs={12} sm={12} mdtextAlign="center">
+              <Grid item xs={12} sm={12} md mdtextAlign="center">
                 <Typography variant="h5" id="newProduct" style={{ color: '#999', }}>
                   Sản phẩm mới
                 </Typography>

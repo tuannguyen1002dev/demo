@@ -1,32 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import { useTheme } from '@mui/material/styles';
-import { createTheme } from '@mui/material/styles';
-import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
 import { makeStyles } from '@mui/styles';
 import Divider from '@mui/material/Divider';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import SwipeableViews from 'react-swipeable-views';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import TextField from '@mui/material/TextField';
-import Input from '@mui/material/Input';
-import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
-import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import Link from '@mui/material/Link';
 
 import introImg from '../../assets/images/about.png'
@@ -89,7 +70,7 @@ export default function Introduce() {
                         </Typography>
                         <Grid mb={12} container direction="row" justifyContent="center" alignItems="center" spacing={12}>
                             <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-                                <img src={introImg} width="100%"/>
+                                <img src={introImg} width="100%" />
                             </Grid>
                             <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
                                 <Grid container >

@@ -1,54 +1,26 @@
-import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import { useTheme } from '@mui/material/styles';
-import { createTheme } from '@mui/material/styles';
-import AppBar from '@mui/material/AppBar';
+import React, { useState } from 'react';
+import { BrowserRouter as Router } from "react-router-dom";
 import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
 import { makeStyles } from '@mui/styles';
 import Divider from '@mui/material/Divider';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import SwipeableViews from 'react-swipeable-views';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import TextField from '@mui/material/TextField';
-import Input from '@mui/material/Input';
-import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
-import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import Link from '@mui/material/Link';
-import ListSubheader from '@mui/material/ListSubheader';
-import List from '@mui/material/List';
-import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import Collapse from '@mui/material/Collapse';
 import ListItem from '@mui/material/ListItem';
 import Pagination from '@mui/material/Pagination';
-import ReactPaginate from 'react-paginate';
-import usePagination from '@mui/material/usePagination';
 
 import '../../styles/pages/Products.css'
 import UsePagination from '../components/UsePagination'
 
-import MenuIcon from '@mui/icons-material/Menu';
-import ExpandLess from '@mui/icons-material/ExpandLess';
-import ExpandMore from '@mui/icons-material/ExpandMore';
-import DashboardIcon from '@mui/icons-material/Dashboard';
 import ViewListIcon from '@mui/icons-material/ViewList';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import ViewModuleIcon from '@mui/icons-material/ViewModule';
-import FavoriteIcon from '@mui/icons-material/Favorite';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 import productsBanner from '../../assets/images/banner.png'
@@ -62,7 +34,6 @@ import blog6 from '../../assets/images/blog_6.png'
 import blog7 from '../../assets/images/blog_7.png'
 import blog8 from '../../assets/images/blog_8.png'
 import blog9 from '../../assets/images/blog_9.png'
-import { style } from '@mui/system';
 
 var useStyles = makeStyles({
     root: {
@@ -335,7 +306,7 @@ export default function News() {
                                     return (
                                         <Grid item xs={12} sm={6} md={6} lg={4} xl={4} textAlign="left" key={item.id}>
                                             <Card className={classes.card} raised={false} elevation={0} >
-                                                <CardMedia component="img" image={item.img} width="100%"/>
+                                                <CardMedia component="img" image={item.img} width="100%" />
                                                 <ListItem>
                                                     <Typography gutterBottom variant="h6" fontSize="12px" fontWeight="1000">
                                                         REVIEW SON KEM BOURJOIS VELVET
