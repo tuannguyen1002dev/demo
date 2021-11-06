@@ -61,7 +61,7 @@ const useStyles = makeStyles({
     fontWeight: '300!important',
   },
   titlePrice: {
-    fontSize: '45px!important',
+    // fontSize: '45px!important',
     color: '#789529',
     fontWeight: '100!important',
   },
@@ -181,7 +181,7 @@ export default function Home() {
                 <Typography style={{ fontSize: '19px', color: '#6c3c33' }} id="fontPrice">
                   Sản phẩm tinh dầu dưỡng da mới nhất của Mandala
                 </Typography>
-                <Typography className={classes.titlePrice} id="fontPrice" gutterBottom>
+                <Typography className={classes.titlePrice} id="fontPrice" gutterBottom fontSize={{ xs: '30px', sm: '35px', md: '40x', lg: '45px', xl: '55px' }}>
                   GIÁ CHỈ 750.000 <sup>đ</sup>
                 </Typography>
                 <Typography variant="h5" fontWeight="300" id="fontPrice">
@@ -259,11 +259,11 @@ export default function Home() {
             </TabPanel>
             <TabPanel className={classes.tabPanel} value={value} index={1} dir={theme.direction}>
               <Grid container direction="row" justifyContent="space-between" alignItems="center">
-                <Grid item xs={12} sm={12} md={2} lg={2} justifyContent="center" alignItems="center" >
+                <Grid item xs={12} sm={12} md={2} lg={2} justifyContent="center" alignItems="center" textAlign="center">
                   <img style={{ minWidth: 119, }} alt="feedBackImg1" src={feedBackImg1} style={{ border: '1px solid', borderRadius: '100%', borderColor: '#789529', padding: 10 }} />
                 </Grid>
                 <Grid item xs={12} sm={12} md={10} lg={10} width="100%" >
-                  <Typography variant="body1" width="65%" >
+                  <Typography variant="body1" width={{ xs: '100%', sm: '100%', md: '75%', lg: '65%' }}>
                     "Vẫn là vẻ bề ngoài vô cùng đơn giản với các tông màu trắng, hồng làm chủ đạo nhưng lại tạo ra sức hút kỳ lạ với những ai cầm trên tay sản phẩm ấy! Với công nghệ cải tiến mới nhất, hảng Rohto"
                   </Typography>
                   <Typography className={classes.tabItem} variant="body2" mt={5}>
@@ -274,11 +274,11 @@ export default function Home() {
             </TabPanel>
             <TabPanel className={classes.tabPanel} value={value} index={2} dir={theme.direction}>
               <Grid container direction="row" justifyContent="space-between" alignItems="center">
-                <Grid item xs={12} sm={12} md={2} lg={2} justifyContent="center" alignItems="center" >
+                <Grid item xs={12} sm={12} md={2} lg={2} justifyContent="center" alignItems="center" textAlign="center">
                   <img style={{ minWidth: 119, }} alt="feedBackImg1" src={feedBackImg2} style={{ border: '1px solid', borderRadius: '100%', borderColor: '#789529', padding: 10 }} />
                 </Grid>
                 <Grid item xs={12} sm={12} md={10} lg={10} width="100%" >
-                  <Typography variant="body1" width="65%" >
+                  <Typography variant="body1" width={{ xs: '100%', sm: '100%', md: '75%', lg: '65%' }}>
                     "Vẫn là vẻ bề ngoài vô cùng đơn giản với các tông màu trắng, hồng làm chủ đạo nhưng lại tạo ra sức hút kỳ lạ với những ai cầm trên tay sản phẩm ấy! Với công nghệ cải tiến mới nhất, hảng Rohto"
                   </Typography>
                   <Typography className={classes.tabItem} variant="body2" mt={5}>
