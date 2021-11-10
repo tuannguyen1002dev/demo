@@ -320,7 +320,7 @@ export default function Header() {
                             </Typography>
                           </Grid>
                         </Grid>
-                        <Button variant="contained" size="small" sx={{ backgroundColor: '#000', fontSize: '11px', m: 1, '&:hover': { backgroundColor: '#000' } }} href="./cart">
+                        <Button variant="contained" size="small" sx={{ backgroundColor: '#000', fontSize: '11px', m: 1, '&:hover': { backgroundColor: '#000' } }} >
                           Giỏ hàng
                         </Button>
                       </React.Fragment>

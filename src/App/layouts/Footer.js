@@ -57,31 +57,33 @@ export default function Footer() {
     <div className={classes.root} sx={{ flexGrow: 1 }}>
       <Container>
         <Grid mt={5} container direction="row" justifyContent="center" alignItems="flex-start" spacing={0}>
-          <Grid item xs={6} sm={6} md={3} lg={3} xl={3} mt={2}>
-            <Typography variant="h6" gutterBottom >
-              LIÊN HỆ VỚI CHÚNG TÔI
-            </Typography>
-            <Typography className={classes.footerDetails} variant="body2" gutterBottom >
-              <span style={{ color: '#789529' }}><LocationOnIcon /></span> Tầng 4, tòa nhà Hanoi Group Số 442 Đội Cấn, P.Cống Vị, Q. Ba Đình, Hà Nội
-            </Typography>
-            <Typography className={classes.footerDetails} variant="body2" gutterBottom sx={{ display: 'inline-block' }}>
-              <span style={{ color: '#789529' }}><PhoneIcon /></span>
-              (04) 6674 2332
-            </Typography>
-            <Typography className={classes.footerDetails} variant="body2" gutterBottom sx={{ display: 'inline-block', marginLeft: '7px', marginRight: '0px' }}>
-              <span style={{ color: '#789529' }}><PhoneIcon /></span>
-              (04) 3786 8904
-            </Typography>
-            <Typography className={classes.footerDetails} variant="body2" gutterBottom sx={{ display: 'inline-block' }}>
-              <span style={{ color: '#789529' }}><PhoneIcon /></span>
-              (04) 6680 9686
-            </Typography>
-            <Typography className={classes.footerDetails} variant="body2" gutterBottom sx={{ display: 'inline-block', marginLeft: '7px', marginRight: '0px' }}>
-              <span style={{ color: '#789529' }}><MailIcon /></span>
-              Support@bizweb.vn
-            </Typography>
+          <Grid item xs={12} sm={6} md={3} lg={3} xl={3}>
+            <ul item styles={{ margin: '0px!important' }}>
+              <Typography variant="h6" gutterBottom >
+                LIÊN HỆ VỚI CHÚNG TÔI
+              </Typography>
+              <Typography className={classes.footerDetails} variant="body2" gutterBottom >
+                <span style={{ color: '#789529' }}><LocationOnIcon /></span> Tầng 4, tòa nhà Hanoi Group Số 442 Đội Cấn, P.Cống Vị, Q. Ba Đình, Hà Nội
+              </Typography>
+              <Typography className={classes.footerDetails} variant="body2" gutterBottom sx={{ display: 'inline-block' }}>
+                <span style={{ color: '#789529' }}><PhoneIcon /></span>
+                (04) 6674 2332
+              </Typography>
+              <Typography className={classes.footerDetails} variant="body2" gutterBottom sx={{ display: 'inline-block', marginLeft: '7px', marginRight: '0px' }}>
+                <span style={{ color: '#789529' }}><PhoneIcon /></span>
+                (04) 3786 8904
+              </Typography>
+              <Typography className={classes.footerDetails} variant="body2" gutterBottom sx={{ display: 'inline-block' }}>
+                <span style={{ color: '#789529' }}><PhoneIcon /></span>
+                (04) 6680 9686
+              </Typography>
+              <Typography className={classes.footerDetails} variant="body2" gutterBottom sx={{ display: 'inline-block', marginLeft: '7px', marginRight: '0px' }}>
+                <span style={{ color: '#789529' }}><MailIcon /></span>
+                Support@bizweb.vn
+              </Typography>
+            </ul>
           </Grid>
-          <Grid item  xs={12} sm={6} md={3} lg={3} xl={3}>
+          <Grid item xs={12} sm={6} md={3} lg={3} xl={3}>
             <ul item styles={{ margin: '0px!important' }}>
               <Typography variant="h6" gutterBottom >
                 CHUYỂN HÀNG

@@ -234,7 +234,7 @@ export default function ProductDetails() {
             <Container>
                 <Container>
                     <Grid mt={5} container direction="row" justifyContent="space-between" alignItems="center">
-                        <Grid item xs={1} textAlign="center">
+                        <Grid item xs={4} sm={2} md={1} lg={1} xl={1} textAlign="center">
                             <Slider {...settings} textAlign="center">
                                 {productList.map(item => (
                                     <div>
@@ -243,12 +243,12 @@ export default function ProductDetails() {
                                 ))}
                             </Slider>
                         </Grid>
-                        <Grid item xs={6} justifyContent="center" alignContent="center" textAlign="center" fullWidth  >
+                        <Grid item xs={8} sm={10} md={5} lg={6} xl={6} justifyContent="center" alignContent="center" textAlign="center" fullWidth  >
                             <Box style={{ width: '100%', height: '30rem', display: 'flex', border: '1px solid', borderColor: '#f0f0f0f0' }}>
                                 <img src={showImg} style={{ margin: 'auto', maxWidth: '100%' }} />
                             </Box>
                         </Grid>
-                        <Grid item xs={5}>
+                        <Grid item xs={12} sm={12} md={5} lg={5} xl={5}>
                             <Box ml={3}>
                                 <Typography fontSize="20px" fontWeight="300" style={{ color: '#595959' }}>
                                     LẮC TAY TYFFANY XU HƯỚNG MỚI NHẤT
@@ -316,7 +316,7 @@ export default function ProductDetails() {
                         </Grid>
                     </Grid>
                     <Grid container direction="row" justifyContent="space-between" spacing={5}>
-                        <Grid item xs={9}>
+                        <Grid item xs={12} sm={12} md={8} lg={9}>
                             <List>
                                 <ListItem>
                                     {
@@ -340,7 +340,7 @@ export default function ProductDetails() {
                             {component === 1 ?
                                 <Box>
                                     <Grid mt={5} container direction="row" justifyContent="space-between" spacing={5}>
-                                        <Grid item xs={8}>
+                                        <Grid item xs={12} sm={7} md>
                                             <Typography variant="body2" gutterBottom>
                                                 THE MARK OF A LEGEND
                                             </Typography>
@@ -350,15 +350,15 @@ export default function ProductDetails() {
                                                 cấp cho một cái gật đầu với qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà.
                                             </Typography>
                                         </Grid>
-                                        <Grid item xs={4}>
+                                        <Grid item xs={12} sm md>
                                             <img src={specialImg1} />
                                         </Grid>
                                     </Grid>
                                     <Grid mt={5} container direction="row" justifyContent="space-between" spacing={5}>
-                                        <Grid item xs={5}>
+                                        <Grid item xs={12} sm md>
                                             <img src={specialImg2} />
                                         </Grid>
-                                        <Grid item xs={7} textAlign="right" jutifyContent="right">
+                                        <Grid item xs={12} sm md textAlign="right" jutifyContent="right">
                                             <Typography variant="body2" gutterBottom>
                                                 THE MARK OF A LEGEND
                                             </Typography>
@@ -370,7 +370,7 @@ export default function ProductDetails() {
                                         </Grid>
                                     </Grid>
                                     <Grid mt={5} container direction="row" justifyContent="space-between" spacing={5}>
-                                        <Grid item xs={8}>
+                                        <Grid item xs={12} sm md>
                                             <Typography variant="body2" gutterBottom>
                                                 THE MARK OF A LEGEND
                                             </Typography>
@@ -380,15 +380,15 @@ export default function ProductDetails() {
                                                 cấp cho một cái gật đầu với qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà.
                                             </Typography>
                                         </Grid>
-                                        <Grid item xs={4}>
+                                        <Grid item xs={12} sm md>
                                             <img src={specialImg3} />
                                         </Grid>
                                     </Grid>
                                     <Grid mt={5} container direction="row" justifyContent="space-between" spacing={5}>
-                                        <Grid item xs={4}>
+                                        <Grid item xs={12} sm md>
                                             <img src={specialImg4} />
                                         </Grid>
-                                        <Grid item xs={8} textAlign="right" jutifyContent="right">
+                                        <Grid item xs={12} sm md textAlign="right" jutifyContent="right">
                                             <Typography variant="body2" gutterBottom>
                                                 THE MARK OF A LEGEND
                                             </Typography>
@@ -464,7 +464,7 @@ export default function ProductDetails() {
                                     </Box>
                             }
                         </Grid>
-                        <Grid item xs={3} mt={3}>
+                        <Grid item md={4} lg mt={3} sx={{display:{ xs:"none",sm:"none",md:"block"}}}>
                             <Box>
                                 <Typography className={classes.headline} sx={{ mb: 1.5, pb: 2 }}>
                                     SẢN PHẨM BÁN CHẠY

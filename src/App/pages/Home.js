@@ -187,9 +187,7 @@ export default function Home() {
               </Grid>
             </Grid>
             <Grid item xs={12} sm={6} md={6} lg={6} textAlign="left">
-
               <img src={layerImg} style={{ display: "flex", objectFit: "cover", objectPosition: "10%", height: "840px", width: "100%" }} />
-
             </Grid>
           </Grid>
         </Grid>
