@@ -192,7 +192,6 @@ export default function Home() {
           </Grid>
         </Grid>
       </Grid>
-
       <Grid mt={5} container direction="row" justifyContent="space-between" alignItems="center">
         <Grid item xs={12} sm={4} md={4} lg={4} textAlign="center" >
           <img src={planeIcon} />
