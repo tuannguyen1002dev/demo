@@ -61,7 +61,7 @@ const useStyles = makeStyles({
     fontWeight: '300!important',
   },
   titlePrice: {
-    fontSize: '45px!important',
+    // fontSize: '45px!important',
     color: '#789529',
     fontWeight: '100!important',
   },
@@ -69,7 +69,7 @@ const useStyles = makeStyles({
     backgroundImage: `url(${feedBackImgBackground})`,
     backgroundSize: '600px',
     backgroundRepeat: 'no-repeat',
-    backgroundPosition: '550px -30px',
+    backgroundPosition: 'right center',
     height: '196px'
   },
   newProduct: {
@@ -165,14 +165,11 @@ export default function Home() {
   return (
     <Router className={classes.root} sx={{ flexGrow: 1 }}>
       <Grid className={classes.banner} >
-        <Container maxWidth>
+        <Grid >
           <Grid container justifyContent="space-between" alignItems="center" textAlign="center">
-            <Grid item xs={12} sm={12} md={6} lg={6} >
-              <Grid item xs={12} sm={12} md={12} lg={12} sx={{display:{xs:"flex",sm:"flex",md:"none"}}}>
-                <img src={newProductLayer} width="100%" />
-              </Grid>
-              <Grid item xs={12} sm={12} md={12} lg={12} sx={{display:{xs:"none",sm:"none",md:"block"}}}>
-                <img src={newProductLayer} />
+            <Grid item xs={12} sm={6} md={6} lg={6} >
+              <Grid item xs={12} sm={12} md={12} lg={12}>
+                <img src={newProductLayer} width="100%" height="auto" />
               </Grid>
               <Grid item xs={12} sm={12} md={12} lg={12}>
                 <Typography className={classes.title} id="fontTitle" fontSize={{ xs: '50px', sm: '64px', md: '70px', lg: '103px', xl: '120px' }}>
@@ -181,7 +178,7 @@ export default function Home() {
                 <Typography style={{ fontSize: '19px', color: '#6c3c33' }} id="fontPrice">
                   Sản phẩm tinh dầu dưỡng da mới nhất của Mandala
                 </Typography>
-                <Typography className={classes.titlePrice} id="fontPrice" gutterBottom>
+                <Typography className={classes.titlePrice} id="fontPrice" sx={{ fontSize: { xs: "30px", sm: "30px", md: "45px" } }} gutterBottom>
                   GIÁ CHỈ 750.000 <sup>đ</sup>
                 </Typography>
                 <Typography variant="h5" fontWeight="300" id="fontPrice">
@@ -189,29 +186,31 @@ export default function Home() {
                 </Typography>
               </Grid>
             </Grid>
-            <Grid item xs={12} sm={12} md={6} lg={6} textAlign="left">
-              <img src={layerImg} width="100%" />
+            <Grid item xs={12} sm={6} md={6} lg={6} textAlign="left">
+
+              <img src={layerImg} style={{ display: "flex", objectFit: "cover", objectPosition: "10%", height: "840px", width: "100%" }} />
+
             </Grid>
           </Grid>
-        </Container>
+        </Grid>
       </Grid>
 
       <Grid mt={5} container direction="row" justifyContent="space-between" alignItems="center">
-        <Grid item xs={12} sm={12} md={4} lg={4} textAlign="center" >
+        <Grid item xs={12} sm={4} md={4} lg={4} textAlign="center" >
           <img src={planeIcon} />
           <Typography variant="body1" >
             Free domestic shipping
           </Typography>
         </Grid>
-        <Divider width="100%" style={{ marginTop: '10px', marginBottom: '10px' }} sx={{ display: { xs: 'flex', sm: 'flex', md: 'none' } }} />
-        <Grid item xs={12} sm={12} md={4} lg={4} textAlign="center" sx={{ borderLeft: '1px solid', borderRight: '1px solid', borderColor: '#c2c2c2' }}>
+        <Divider width="100%" style={{ marginTop: '10px', marginBottom: '10px' }} sx={{ display: { xs: 'flex', sm: 'none', md: 'none' } }} />
+        <Grid item xs={12} sm={4} md={4} lg={4} textAlign="center" sx={{ borderLeft: '1px solid', borderRight: '1px solid', borderColor: '#c2c2c2' }}>
           <img src={giftIcon} />
           <Typography variant="body1">
             Give away a gift worth 350,000 VND
           </Typography>
         </Grid>
-        <Divider width="100%" style={{ marginTop: '10px', marginBottom: '10px' }} sx={{ display: { xs: 'flex', sm: 'flex', md: 'none' } }} />
-        <Grid item xs={12} sm={12} md={4} lg={4} textAlign="center" >
+        <Divider width="100%" style={{ marginTop: '10px', marginBottom: '10px' }} sx={{ display: { xs: 'flex', sm: 'none', md: 'none' } }} />
+        <Grid item xs={12} sm={4} md={4} lg={4} textAlign="center" >
           <img src={starIcon} />
           <Typography variant="body1">
             30% off for orders over 5,000,000 VND
@@ -221,19 +220,19 @@ export default function Home() {
 
       <Container>
         <Grid mt={5} container direction="row" justifyContent="center" alignItems="center" spacing={2}>
-          <Grid item xs={12} sm={12} md={6} lg={6}>
+          <Grid item xs={12} sm={6} md={6} lg={6}>
             <img src={ItemMother1} width="100%" />
             <img src={ItemMother2} width="100%" />
           </Grid>
-          <Grid item xs={12} sm={12} md={6} lg={6}>
+          <Grid item xs={12} sm={6} md={6} lg={6}>
             <img src={ringImg} width="100%" />
           </Grid>
         </Grid>
         <Grid mt={0} container direction="row" justifyContent="center" alignItems="center" spacing={2}>
-          <Grid item xs={12} sm={12} md={6} lg={6}>
+          <Grid item xs={12} sm={6} md={6} lg={6}>
             <img src={comboTeaImg} width="100%" />
           </Grid>
-          <Grid item xs={12} sm={12} md={6} lg={6}>
+          <Grid item xs={12} sm={6} md={6} lg={6}>
             <img src={ItemMother3} width="100%" />
             <img src={ItemMother4} width="100%" />
           </Grid>
@@ -244,10 +243,10 @@ export default function Home() {
           <SwipeableViews axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'} index={value} onChangeIndex={handleChange} transitionDuration={1000}>
             <TabPanel className={classes.tabPanel} value={value} index={0} dir={theme.direction}>
               <Grid container direction="row" justifyContent="space-between" alignItems="center">
-                <Grid item xs={12} sm={12} md={2} lg={2} justifyContent="center" alignItems="center" textAlign="center">
+                <Grid item xs={12} sm={3} md={2} lg={2} justifyContent="center" alignItems="center" textAlign="center">
                   <img style={{ minWidth: 119, }} alt="feedBackImg1" src={feedBackImg1} style={{ border: '1px solid', borderRadius: '100%', borderColor: '#789529', padding: 10 }} />
                 </Grid>
-                <Grid item xs={12} sm={12} md={10} lg={10} width="100%" >
+                <Grid item xs={12} sm={9} md={10} lg={10} width="100%" >
                   <Typography variant="body1" width={{ xs: '100%', sm: '100%', md: '75%', lg: '65%' }}>
                     "Vẫn là vẻ bề ngoài vô cùng đơn giản với các tông màu trắng, hồng làm chủ đạo nhưng lại tạo ra sức hút kỳ lạ với những ai cầm trên tay sản phẩm ấy! Với công nghệ cải tiến mới nhất, hảng Rohto"
                   </Typography>
@@ -259,11 +258,11 @@ export default function Home() {
             </TabPanel>
             <TabPanel className={classes.tabPanel} value={value} index={1} dir={theme.direction}>
               <Grid container direction="row" justifyContent="space-between" alignItems="center">
-                <Grid item xs={12} sm={12} md={2} lg={2} justifyContent="center" alignItems="center" >
+                <Grid item xs={12} sm={3} md={2} lg={2} justifyContent="center" alignItems="center" textAlign="center">
                   <img style={{ minWidth: 119, }} alt="feedBackImg1" src={feedBackImg1} style={{ border: '1px solid', borderRadius: '100%', borderColor: '#789529', padding: 10 }} />
                 </Grid>
-                <Grid item xs={12} sm={12} md={10} lg={10} width="100%" >
-                  <Typography variant="body1" width="65%" >
+                <Grid item xs={12} sm={9} md={10} lg={10} width="100%" >
+                  <Typography variant="body1" width={{ xs: '100%', sm: '100%', md: '75%', lg: '65%' }}>
                     "Vẫn là vẻ bề ngoài vô cùng đơn giản với các tông màu trắng, hồng làm chủ đạo nhưng lại tạo ra sức hút kỳ lạ với những ai cầm trên tay sản phẩm ấy! Với công nghệ cải tiến mới nhất, hảng Rohto"
                   </Typography>
                   <Typography className={classes.tabItem} variant="body2" mt={5}>
@@ -274,11 +273,11 @@ export default function Home() {
             </TabPanel>
             <TabPanel className={classes.tabPanel} value={value} index={2} dir={theme.direction}>
               <Grid container direction="row" justifyContent="space-between" alignItems="center">
-                <Grid item xs={12} sm={12} md={2} lg={2} justifyContent="center" alignItems="center" >
+                <Grid item xs={12} sm={3} md={2} lg={2} justifyContent="center" alignItems="center" textAlign="center">
                   <img style={{ minWidth: 119, }} alt="feedBackImg1" src={feedBackImg2} style={{ border: '1px solid', borderRadius: '100%', borderColor: '#789529', padding: 10 }} />
                 </Grid>
-                <Grid item xs={12} sm={12} md={10} lg={10} width="100%" >
-                  <Typography variant="body1" width="65%" >
+                <Grid item xs={12} sm={9} md={10} lg={10} width="100%" >
+                  <Typography variant="body1" width={{ xs: '100%', sm: '100%', md: '75%', lg: '65%' }}>
                     "Vẫn là vẻ bề ngoài vô cùng đơn giản với các tông màu trắng, hồng làm chủ đạo nhưng lại tạo ra sức hút kỳ lạ với những ai cầm trên tay sản phẩm ấy! Với công nghệ cải tiến mới nhất, hảng Rohto"
                   </Typography>
                   <Typography className={classes.tabItem} variant="body2" mt={5}>
@@ -289,9 +288,9 @@ export default function Home() {
             </TabPanel>
           </SwipeableViews>
           <Grid container direction="row" justifyContent="space-between" alignItems="center">
-            <Grid item xs={12} sm={12} md={2} lg={2}>
+            <Grid item xs={12} sm={3} md={2} lg={2}>
             </Grid>
-            <Grid item xs={12} sm={12} md={10} lg={10}>
+            <Grid item xs={12} sm={9} md={10} lg={10}>
               <Tabs value={value} onChange={handleChange} TabIndicatorProps={{ style: { display: "none", }, }}>
                 <Tab style={{ minWidth: 10 }} label={value === 0 ? dotTabEnable : dotTabDisable} disableFocusRipple={true} disableRipple={true} />
                 <Tab style={{ minWidth: 10, padding: 0 }} label={value === 1 ? dotTabEnable : dotTabDisable} disableFocusRipple={true} disableRipple={true} />
@@ -301,23 +300,23 @@ export default function Home() {
           </Grid>
         </Box>
       </Container>
-      <Grid mt={5} container justifyContent="center" textAlign="center" heigh={{ xs: "900px", sm: "900px", md: "800px", lg: "700px" }} style={{ borderTop: '1px', backgroundImage: `url(${hotProductBackground})`, backgroundSize: '100% 150%', backgroundRepeat: 'no-repeat', }}>
+      <Grid mt={5} container justifyContent="center" textAlign="center" height={{ xs: "900px", sm: "800px", md: "750px", lg: "800px" }} style={{ borderTop: '1px', backgroundImage: `url(${hotProductBackground})`, backgroundSize: '100% 150%', backgroundRepeat: 'no-repeat', }}>
         <Container maxWidth>
           <Container maxWidth="md">
             <Grid mt={5} container direction="row" justifyContent="space-between" alignItems="center">
-              <Grid item xs={12} sm={12} md mdtextAlign="center">
-                <Typography variant="h5" id="newProduct" style={{ color: '#999', }}>
+              <Grid item xs={12} sm mdtextAlign="center">
+                <Typography fontSize={{ xs: "25px", sm: "25px", md: "28px" }} id="newProduct" style={{ color: '#999', }}>
                   Sản phẩm mới
                 </Typography>
               </Grid>
               <Divider orientation="vertical" variant="middle" flexItem />
-              <Grid item xs={12} sm={12} md textAlign="center" style={{ position: "relative" }}>
-                <Typography variant="h4" id="newProduct" style={{ color: '#789529', }}>
+              <Grid item xs={12} sm textAlign="center" style={{ position: "relative" }}>
+                <Typography id="newProduct" fontSize={{ xs: "30px", sm: "30px", md: "34px", lg: "38px" }} style={{ color: '#789529', }}>
                   Sản phẩm bán chạy
                 </Typography>
-                <Grid container direction="row" justifyContent="center" alignItems="center" style={{ position: 'absolute', }} sx={{ display: { xs: 'none', sm: 'none' } }}>
+                <Grid container direction="row" justifyContent="center" alignItems="center" style={{ position: 'absolute', }} sx={{ display: { xs: 'none', sm: 'flex' } }}>
                   <Grid item xs dir="rtl" >
-                    <span style={{ width: '100px', height: '1px', background: '#999', display: 'inline-block', top: '12px' }}></span>
+                    <span style={{ width: '100%', height: '1px', background: '#999', display: 'inline-block', top: '12px' }}></span>
                   </Grid>
                   <Grid item xs>
                     <span style={{ display: 'inline-block' }}>
@@ -325,48 +324,56 @@ export default function Home() {
                     </span>
                   </Grid>
                   <Grid item xs>
-                    <span style={{ width: '100px', height: '1px', background: '#999', display: 'inline-block', top: '12px' }}></span>
+                    <span style={{ width: '100%', height: '1px', background: '#999', display: 'inline-block', top: '12px' }}></span>
                   </Grid >
                 </Grid>
               </Grid>
               <Divider orientation="vertical" variant="middle" flexItem />
-              <Grid item xs={12} sm={12} md textAlign="center">
-                <Typography variant="h5" id="newProduct" style={{ color: '#999', }}>
+              <Grid item xs={12} sm textAlign="center">
+                <Typography fontSize={{ xs: "25px", sm: "25px", md: "28px" }} id="newProduct" style={{ color: '#999', }}>
                   Sản phẩm đặc biệt
                 </Typography>
               </Grid>
             </Grid>
-            <Grid mt={7} container direction="row" justifyContent="space-between" alignItems="center">
+            <Grid container direction="row" justifyContent="center" alignItems="center" style={{ position: 'relative', }} sx={{ display: { xs: 'flex', sm: 'none' } }}>
+              <Grid item xs dir="rtl" >
+                <span style={{ width: '100%', height: '1px', background: '#999', display: 'inline-block', top: '12px' }}></span>
+              </Grid>
+              <Grid item xs>
+                <span style={{ display: 'inline-block' }}>
+                  //////////
+                </span>
+              </Grid>
+              <Grid item xs>
+                <span style={{ width: '100%', height: '1px', background: '#999', display: 'inline-block', top: '12px' }}></span>
+              </Grid >
+            </Grid>
+            <Grid mt={10} mb={7} container direction="row" justifyContent="space-between" alignItems="center">
               <Grid item xs={12} sm={4} md>
                 <Typography className={classes.tabItem} variant="body2" id="mypham">
                   Mỹ phẩm
                 </Typography>
               </Grid>
-              <Divider orientation="vertical" variant="middle" flexItem color="#999" width="3px" style={{ borderRadius: '100%' }} />
               <Grid item xs={12} sm={4} md>
                 <Typography className={classes.tabItem} variant="body2">
                   Chăm sóc da
                 </Typography>
               </Grid>
-              <Divider orientation="vertical" variant="middle" flexItem color="#999" width="3px" style={{ borderRadius: '100%' }} />
               <Grid item xs={12} sm={4} md >
                 <Typography className={classes.tabItem} variant="body2">
                   Giành cho tóc
                 </Typography>
               </Grid>
-              <Divider orientation="vertical" variant="middle" flexItem color="#999" width="3px" style={{ borderRadius: '100%' }} />
               <Grid item xs={12} sm={4} md>
                 <Typography className={classes.tabItem} variant="body2">
                   Nước hoa
                 </Typography>
               </Grid>
-              <Divider orientation="vertical" variant="middle" flexItem color="#999" width="3px" style={{ borderRadius: '100%' }} />
               <Grid item xs={12} sm={4} md>
                 <Typography className={classes.tabItem} variant="body2">
                   Trang sức
                 </Typography>
               </Grid>
-              <Divider orientation="vertical" variant="middle" flexItem color="#999" width="3px" style={{ borderRadius: '100%' }} />
               <Grid item xs={12} sm={4} md>
                 <Typography className={classes.tabItem} variant="body2">
                   Quà Tặng

@@ -312,12 +312,12 @@ export default function Products() {
                     <Container>
                         <Grid mt={-2} container alignItems="center">
                             <Grid item xs={6} sm={6} md={6} lg={5} xl={5}>
-                                <Typography className={classes.bannerTitle} id="productsBanner" fontSize={{xs:'35px',sm:'55px', md:'75px'}}>
+                                <Typography className={classes.bannerTitle} id="productsBanner" fontSize={{ xs: '35px', sm: '55px', md: '75px' }}>
                                     Giảm giá 50%
                                 </Typography>
                             </Grid>
                             <Grid item xs={6} sm={6} md={6} lg={7} xl={7} className={classes.subTitleContainer}>
-                                <Typography fontSize={{xs:'18px',sm:'23px', md:'28px'}}>
+                                <Typography fontSize={{ xs: '18px', sm: '23px', md: '28px' }}>
                                     Trong vòng 3 ngày
                                     <br />
                                     <span style={{ fontWeight: 'bold' }}>
@@ -475,6 +475,8 @@ export default function Products() {
                                                 document.getElementById("listStyle").style.color = "#999";
                                                 document.getElementById("listStyle1").style.color = "#999";
                                                 setListStyle(6);
+                                                setPage(1);
+                                                _DATA.jump(1);
                                             }} />
                                             <ViewListIcon id="listStyle" className={classes.paginationIcon}
                                                 onClick={() => {
@@ -483,6 +485,8 @@ export default function Products() {
                                                     document.getElementById("listStyle").style.color = "#000";
                                                     document.getElementById("listStyle1").style.color = "#000";
                                                     setListStyle(3);
+                                                    setPage(1);
+                                                    _DATA.jump(1);
                                                 }} />
                                         </ListItemIcon>
                                     </Grid>
@@ -492,7 +496,7 @@ export default function Products() {
                                             count={count}
                                             size="small"
                                             page={page}
-                                            onChange={handleChange}/>
+                                            onChange={handleChange} />
                                     </Grid>
                                 </Grid>
                                 <Divider />
