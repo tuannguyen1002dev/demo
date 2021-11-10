@@ -168,8 +168,8 @@ export default function Home() {
         <Grid >
           <Grid container justifyContent="space-between" alignItems="center" textAlign="center">
             <Grid item xs={12} sm={6} md={6} lg={6} >
-              <Grid item xs={12} sm={12} md={12} lg={12}>
-                <img src={newProductLayer} width="100%" height="auto" />
+              <Grid item xs={12} sm={12} md={12} lg={12} >
+                <img src={newProductLayer} width={{ xs: "345px", sm: "330px", md: "377px", lg: "377px" }} style={{ marginTop: "100px" }} />
               </Grid>
               <Grid item xs={12} sm={12} md={12} lg={12}>
                 <Typography className={classes.title} id="fontTitle" fontSize={{ xs: '50px', sm: '64px', md: '70px', lg: '103px', xl: '120px' }}>
