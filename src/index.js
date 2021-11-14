@@ -3,16 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App/index';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import PageNotFound from './App/PageNotFound'
 
 import './styles/base/PageNotFound.css'
 
 ReactDOM.render(
 
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Router>
+    <Switch>
+      <Route path="/page-not-found" component={PageNotFound} />
+      <Route path="/" component={App} />
+    </Switch>
+  </Router>,
   document.getElementById('root')
 );
 

@@ -162,12 +162,12 @@ export default function Footer() {
         </Grid>
         <Grid container spacing={0} ml={0} mt={5}>
           <Divider style={{ backgroundColor: '#222', width: '60%' }} />
-          <Grid item xs={8} sm={8} md={8} lg={8}>
+          <Grid item xs={12} sm={8} md={8} lg={8}>
             <Typography style={{ color: '#999' }} variant="body2" >
               © Copyright 2008-2014 DKT Technology JSC
             </Typography>
           </Grid>
-          <Grid item xs={4} sm={4} md={4} lg={4} textAlign="right">
+          <Grid item xs={12} sm={4} md={4} lg={4} textAlign="right">
             <img src={footerImg} />
           </Grid>
         </Grid>

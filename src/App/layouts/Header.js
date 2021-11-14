@@ -176,9 +176,6 @@ export default function Header() {
               <ClickAwayListener onClickAway={handleTooltipClose}>
                 <IconButton className={classes.IconButtonAppbar} size="large">
                   <HtmlTooltip leaveDelay={300} onClose={handleTooltipClose}
-                    open={openToolTip} disableFocusListener
-                    disableHoverListener
-                    disableTouchListener
                     title={
                       <React.Fragment>
                         <Grid container direction="row" justifyContent="space-between" alignItems="right" style={{ width: '500px' }}>
@@ -230,7 +227,7 @@ export default function Header() {
                         </Grid>
                       </React.Fragment>
                     }>
-                    <ListItem sx={{m:0, p:0}}>
+                    <ListItem sx={{ m: 0, p: 0 }}>
                       <Typography className={classes.menuFont} variant="body1" component="a" href="./products">
                         SẢN PHẨM
                       </Typography>
@@ -260,9 +257,7 @@ export default function Header() {
 
               <ClickAwayListener onClickAway={handleTooltipStoreClose}>
                 <IconButton >
-                  <HtmlTooltip onClose={handleTooltipStoreClose} open={openToolTipStore} disableFocusListener
-                    disableHoverListener
-                    disableTouchListener
+                  <HtmlTooltip onClose={handleTooltipStoreClose}
                     title={
                       <React.Fragment>
                         <Grid container justifyContent="space-between">
@@ -320,7 +315,7 @@ export default function Header() {
                             </Typography>
                           </Grid>
                         </Grid>
-                        <Button variant="contained" size="small" sx={{ backgroundColor: '#000', fontSize: '11px', m: 1, '&:hover': { backgroundColor: '#000' } }} >
+                        <Button variant="contained" size="small" sx={{ backgroundColor: '#000', fontSize: '11px', m: 1, '&:hover': { backgroundColor: '#000' } }} href="/cart">
                           Giỏ hàng
                         </Button>
                       </React.Fragment>
@@ -396,7 +391,7 @@ export default function Header() {
                             </Typography>
                           </Grid>
                         </Grid>
-                        <Button variant="contained" size="small" sx={{ backgroundColor: '#000', fontSize: '11px', m: 1, '&:hover': { backgroundColor: '#000' } }} href="./cart">
+                        <Button variant="contained" size="small" sx={{ backgroundColor: '#000', fontSize: '11px', m: 1, '&:hover': { backgroundColor: '#000' } }} href="/cart">
                           Giỏ hàng
                         </Button>
                       </React.Fragment>

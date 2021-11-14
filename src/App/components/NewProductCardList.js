@@ -114,7 +114,7 @@ export default function NewProductCardList() {
             {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 1,
                     slidesToScroll: 1
                 }
             }
@@ -136,39 +136,39 @@ export default function NewProductCardList() {
             <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
             <Slider {...settings}>
                 {itemList.map(item => (
-                    <div>
-                        <Card className={classes.card} raised={false} elevation={0} sx={{ maxWidth: 210 }} >
-                            <CardMedia component="img" alt="green iguana" height="220" image={item.img} />
-                            <CardContent>
-                                <Typography gutterBottom variant="body2" style={{ fontSize: 'small', color: '#999' }}>
-                                    TYFFANY
+
+                    <Card className={classes.card} raised={false} elevation={0} sx={{ maxWidth: 210 }} >
+                        <CardMedia component="img" alt="green iguana" height="220" image={item.img} />
+                        <CardContent>
+                            <Typography gutterBottom variant="body2" style={{ fontSize: 'small', color: '#999' }}>
+                                TYFFANY
+                            </Typography>
+                            <Typography gutterBottom variant="h6" fontSize="medium">
+                                Mỹ phẩm châu Âu
+                            </Typography>
+                        </CardContent>
+                        <Divider variant="middle" textAlign="center" />
+                        <CardContent>
+                            <span>
+                                <Typography variant="body1" id="newProduct" style={{ color: '#999', display: 'inline-block', marginRight: '5px', color: '#789529', fontWeight: 'bold' }}>
+                                    355.000<sup>đ</sup>
                                 </Typography>
-                                <Typography gutterBottom variant="h6" fontSize="medium">
-                                    Mỹ phẩm châu Âu
+                            </span>
+                            <span>
+                                <Typography variant="body2" id="newProduct" style={{ color: '#999', display: 'inline-block', fontWeight: 'bold' }}>
+                                    450.000<sup>đ</sup>
                                 </Typography>
-                            </CardContent>
-                            <Divider variant="middle" textAlign="center" />
-                            <CardContent>
-                                <span>
-                                    <Typography variant="body1" id="newProduct" style={{ color: '#999', display: 'inline-block', marginRight: '5px', color: '#789529', fontWeight: 'bold' }}>
-                                        355.000<sup>đ</sup>
-                                    </Typography>
-                                </span>
-                                <span>
-                                    <Typography variant="body2" id="newProduct" style={{ color: '#999', display: 'inline-block', fontWeight: 'bold' }}>
-                                        450.000<sup>đ</sup>
-                                    </Typography>
-                                </span>
-                                <div style={{ margin: 0, height: 20 }}>
-                                    <KeyboardArrowDownIcon style={{ color: '#789529' }} />
-                                </div>
-                                <CardActions className={classes.cardActions} sx={{ justifyContent: 'center' }}>
-                                    <Button className={classes.newProductButton} variant="outlined" size="small">Mua</Button>
-                                    <Button className={classes.newProductButton} variant="outlined" size="small"><FavoriteBorderIcon /></Button>
-                                </CardActions>
-                            </CardContent>
-                        </Card>
-                    </div>
+                            </span>
+                            <div style={{ margin: 0, height: 20 }}>
+                                <KeyboardArrowDownIcon style={{ color: '#789529' }} />
+                            </div>
+                            <CardActions className={classes.cardActions} sx={{ justifyContent: 'center' }}>
+                                <Button className={classes.newProductButton} variant="outlined" size="small">Mua</Button>
+                                <Button className={classes.newProductButton} variant="outlined" size="small"><FavoriteBorderIcon /></Button>
+                            </CardActions>
+                        </CardContent>
+                    </Card>
+
                 ))}
             </Slider>
         </div >

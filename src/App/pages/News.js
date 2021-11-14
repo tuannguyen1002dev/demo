@@ -304,7 +304,7 @@ export default function News() {
                             listStyle === 6 ? <Grid mt={8} container direction="row" justifyContent="space-between" alignItems="center" spacing={3}>
                                 {_DATA.currentData().map(item => {
                                     return (
-                                        <Grid item xs={12} sm={6} md={6} lg={4} xl={4} textAlign="left" key={item.id}>
+                                        <Grid item xs={12} sm={6} md={4} lg={4} xl={4} textAlign="left" key={item.id} component="a" href="./news-details" sx={{ textDecoration: 'none' }}>
                                             <Card className={classes.card} raised={false} elevation={0} >
                                                 <CardMedia component="img" image={item.img} width="100%" />
                                                 <ListItem>
@@ -317,17 +317,19 @@ export default function News() {
                                                     Hi, chào các nàng ... sau khá nhiều lời hứa hão thì hôm nay tớ quay lại hăm nóng cái
                                                     Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt.
                                                 </Typography>
-                                                <Typography className={classes.link} variant="caption" fontWeight="300" fontSize="11px" component="a" href="./">
-                                                    Bởi NamTran (27/05/2015)
+                                                <Typography className={classes.link} variant="caption" fontWeight="300" fontSize="11px" component="a" href="./news-details">
+                                                    <div>
+                                                        Bởi NamTran (27/05/2015)
+                                                    </div>
                                                 </Typography>
                                                 <Box mt={1} mb={1}>
                                                     <Divider />
                                                 </Box>
                                                 <Grid container justifyContent="space-between" >
-                                                    <Typography className={classes.link} variant="caption" fontWeight="300" fontSize="11px" component="a" href="./">
+                                                    <Typography className={classes.link} variant="caption" fontWeight="300" fontSize="11px" component="a" href="./news-details">
                                                         Đọc thêm <span><ArrowForwardIosIcon fontSize="1px" /></span>
                                                     </Typography>
-                                                    <Typography className={classes.link} variant="caption" fontWeight="300" fontSize="11px" component="a" href="./">
+                                                    <Typography className={classes.link} variant="caption" fontWeight="300" fontSize="11px" component="a" href="./news-details">
                                                         23 Bình luận
                                                     </Typography>
                                                 </Grid>
@@ -339,11 +341,11 @@ export default function News() {
                                 : <Grid mt={8} container direction="row" justifyContent="center" alignItems="center" spacing={3}>
                                     {_DATA.currentData().map(item => {
                                         return (
-                                            <Grid mb={1} container direction="row" justifyContent="center" alignItems="center" spacing={3}>
-                                                <Grid item xs={12} sm={6} md={6} lg={4} xl={6}>
+                                            <Grid mb={1} container direction="row" justifyContent="center" alignItems="center" spacing={3} component="a" href="./news-details" sx={{ textDecoration: 'none' }}>
+                                                <Grid item xs={12} sm={6} md={5} lg={4} xl={4}>
                                                     <CardMedia component="img" alt="green iguana" height="220" image={item.img} />
                                                 </Grid>
-                                                <Grid item xs={12} sm={6} md={6} lg={8} xl={6}>
+                                                <Grid item xs={12} sm={6} md={7} lg={8} xl={8}>
                                                     <CardContent>
                                                         <Typography gutterBottom variant="body1" fontSize="18px">
                                                             REVIEW SON KEM BOURJOIS VELVET
@@ -354,24 +356,23 @@ export default function News() {
                                                                 khi mà dân tình xô nhau đi tắm Free để giải nhiệt.Bởi
                                                             </Typography>
                                                         </Box>
-                                                        <Typography className={classes.link} variant="caption" fontWeight="300" fontSize="12px" component="a" href="./">
+                                                        <Typography className={classes.link} variant="caption" fontWeight="300" fontSize="12px" component="a" href="./news-details">
                                                             Bởi NamTran (27/05/2015)
                                                         </Typography>
                                                         <Box mt={1} mb={1}>
                                                             <Divider />
                                                         </Box>
                                                         <Grid container justifyContent="space-between" >
-                                                            <Typography className={classes.link} variant="caption" fontWeight="300" fontSize="12px" component="a" href="./">
+                                                            <Typography className={classes.link} variant="caption" fontWeight="300" fontSize="12px" component="a" href="./news-details">
                                                                 Đọc thêm <span><ArrowForwardIosIcon fontSize="1px" /></span>
                                                             </Typography>
-                                                            <Typography className={classes.link} variant="caption" fontWeight="300" fontSize="12px" component="a" href="./">
+                                                            <Typography className={classes.link} variant="caption" fontWeight="300" fontSize="12px" component="a" href="./news-details">
                                                                 23 Bình luận
                                                             </Typography>
                                                         </Grid>
                                                     </CardContent>
                                                 </Grid>
                                             </Grid>
-
                                         );
                                     })}
                                 </Grid>
@@ -407,7 +408,6 @@ export default function News() {
                             </Grid>
                         </Grid>
                         <Divider />
-
                     </Box>
                 </Container>
             </Container>

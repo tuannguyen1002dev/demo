@@ -21,6 +21,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 import NewProductCardList from '../components/NewProductCardList';
 import MediaList from '../components/MediaList';
+import AboutCardList from '../components/AboutCardList';
 
 import logo from '../../assets/images/logo.png'
 import planeIcon from '../../assets/images/plane.svg'
@@ -161,7 +162,6 @@ export default function Home() {
     setValue(newValue);
   };
 
-
   return (
     <Router className={classes.root} sx={{ flexGrow: 1 }}>
       <Grid className={classes.banner} >
@@ -237,70 +237,13 @@ export default function Home() {
       </Container>
       <Container>
         <Box mt={10}>
-          <SwipeableViews axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'} index={value} onChangeIndex={handleChange} transitionDuration={1000}>
-            <TabPanel className={classes.tabPanel} value={value} index={0} dir={theme.direction}>
-              <Grid container direction="row" justifyContent="space-between" alignItems="center">
-                <Grid item xs={12} sm={3} md={2} lg={2} justifyContent="center" alignItems="center" textAlign="center">
-                  <img style={{ minWidth: 119, }} alt="feedBackImg1" src={feedBackImg1} style={{ border: '1px solid', borderRadius: '100%', borderColor: '#789529', padding: 10 }} />
-                </Grid>
-                <Grid item xs={12} sm={9} md={10} lg={10} width="100%" >
-                  <Typography variant="body1" width={{ xs: '100%', sm: '100%', md: '75%', lg: '65%' }}>
-                    "Vẫn là vẻ bề ngoài vô cùng đơn giản với các tông màu trắng, hồng làm chủ đạo nhưng lại tạo ra sức hút kỳ lạ với những ai cầm trên tay sản phẩm ấy! Với công nghệ cải tiến mới nhất, hảng Rohto"
-                  </Typography>
-                  <Typography className={classes.tabItem} variant="body2" mt={5}>
-                    TUTILE <span style={{ color: '#999', fontStyle: 'italic' }}> _ Giám đốc phát triển sản phẩm</span>
-                  </Typography>
-                </Grid>
-              </Grid>
-            </TabPanel>
-            <TabPanel className={classes.tabPanel} value={value} index={1} dir={theme.direction}>
-              <Grid container direction="row" justifyContent="space-between" alignItems="center">
-                <Grid item xs={12} sm={3} md={2} lg={2} justifyContent="center" alignItems="center" textAlign="center">
-                  <img style={{ minWidth: 119, }} alt="feedBackImg1" src={feedBackImg1} style={{ border: '1px solid', borderRadius: '100%', borderColor: '#789529', padding: 10 }} />
-                </Grid>
-                <Grid item xs={12} sm={9} md={10} lg={10} width="100%" >
-                  <Typography variant="body1" width={{ xs: '100%', sm: '100%', md: '75%', lg: '65%' }}>
-                    "Vẫn là vẻ bề ngoài vô cùng đơn giản với các tông màu trắng, hồng làm chủ đạo nhưng lại tạo ra sức hút kỳ lạ với những ai cầm trên tay sản phẩm ấy! Với công nghệ cải tiến mới nhất, hảng Rohto"
-                  </Typography>
-                  <Typography className={classes.tabItem} variant="body2" mt={5}>
-                    TUTILE <span style={{ color: '#999', fontStyle: 'italic' }}> _ Giám đốc phát triển sản phẩm</span>
-                  </Typography>
-                </Grid>
-              </Grid>
-            </TabPanel>
-            <TabPanel className={classes.tabPanel} value={value} index={2} dir={theme.direction}>
-              <Grid container direction="row" justifyContent="space-between" alignItems="center">
-                <Grid item xs={12} sm={3} md={2} lg={2} justifyContent="center" alignItems="center" textAlign="center">
-                  <img style={{ minWidth: 119, }} alt="feedBackImg1" src={feedBackImg2} style={{ border: '1px solid', borderRadius: '100%', borderColor: '#789529', padding: 10 }} />
-                </Grid>
-                <Grid item xs={12} sm={9} md={10} lg={10} width="100%" >
-                  <Typography variant="body1" width={{ xs: '100%', sm: '100%', md: '75%', lg: '65%' }}>
-                    "Vẫn là vẻ bề ngoài vô cùng đơn giản với các tông màu trắng, hồng làm chủ đạo nhưng lại tạo ra sức hút kỳ lạ với những ai cầm trên tay sản phẩm ấy! Với công nghệ cải tiến mới nhất, hảng Rohto"
-                  </Typography>
-                  <Typography className={classes.tabItem} variant="body2" mt={5}>
-                    TUTILE <span style={{ color: '#999', fontStyle: 'italic' }}> _ Giám đốc phát triển sản phẩm</span>
-                  </Typography>
-                </Grid>
-              </Grid>
-            </TabPanel>
-          </SwipeableViews>
-          <Grid container direction="row" justifyContent="space-between" alignItems="center">
-            <Grid item xs={12} sm={3} md={2} lg={2}>
-            </Grid>
-            <Grid item xs={12} sm={9} md={10} lg={10}>
-              <Tabs value={value} onChange={handleChange} TabIndicatorProps={{ style: { display: "none", }, }}>
-                <Tab style={{ minWidth: 10 }} label={value === 0 ? dotTabEnable : dotTabDisable} disableFocusRipple={true} disableRipple={true} />
-                <Tab style={{ minWidth: 10, padding: 0 }} label={value === 1 ? dotTabEnable : dotTabDisable} disableFocusRipple={true} disableRipple={true} />
-                <Tab style={{ minWidth: 10 }} label={value === 2 ? dotTabEnable : dotTabDisable} disableFocusRipple={true} disableRipple={true} />
-              </Tabs>
-            </Grid>
-          </Grid>
+          <AboutCardList />
         </Box>
       </Container>
-      <Grid mt={5} container justifyContent="center" textAlign="center" height={{ xs: "900px", sm: "800px", md: "750px", lg: "800px" }} style={{ borderTop: '1px', backgroundImage: `url(${hotProductBackground})`, backgroundSize: '100% 150%', backgroundRepeat: 'no-repeat', }}>
+      <Grid mt={5} container justifyContent="center" textAlign="center" height={{ xs: "800px", sm: "650px", md: "700px", lg: "800px" }} style={{ borderTop: '1px', backgroundImage: `url(${hotProductBackground})`, backgroundRepeat: 'no-repeat', }}>
         <Container maxWidth>
           <Container maxWidth="md">
-            <Grid mt={5} container direction="row" justifyContent="space-between" alignItems="center">
+            <Grid mt={{ xs: 2, md: 5, lg: 7  }} container direction="row" justifyContent="space-between" alignItems="center">
               <Grid item xs={12} sm mdtextAlign="center">
                 <Typography fontSize={{ xs: "25px", sm: "25px", md: "28px" }} id="newProduct" style={{ color: '#999', }}>
                   Sản phẩm mới
@@ -345,33 +288,33 @@ export default function Home() {
                 <span style={{ width: '100%', height: '1px', background: '#999', display: 'inline-block', top: '12px' }}></span>
               </Grid >
             </Grid>
-            <Grid mt={10} mb={7} container direction="row" justifyContent="space-between" alignItems="center">
-              <Grid item xs={12} sm={4} md>
+            <Grid mt={{ xs: 3, md: 5, lg:10 }} mb={{ xs: 3, md: 7, lg: 8 }} container direction="row" justifyContent="space-between" alignItems="center">
+              <Grid item xs={6} sm={4} md>
                 <Typography className={classes.tabItem} variant="body2" id="mypham">
                   Mỹ phẩm
                 </Typography>
               </Grid>
-              <Grid item xs={12} sm={4} md>
+              <Grid item xs={6} sm={4} md>
                 <Typography className={classes.tabItem} variant="body2">
                   Chăm sóc da
                 </Typography>
               </Grid>
-              <Grid item xs={12} sm={4} md >
+              <Grid item xs={6} sm={4} md >
                 <Typography className={classes.tabItem} variant="body2">
                   Giành cho tóc
                 </Typography>
               </Grid>
-              <Grid item xs={12} sm={4} md>
+              <Grid item xs={6} sm={4} md>
                 <Typography className={classes.tabItem} variant="body2">
                   Nước hoa
                 </Typography>
               </Grid>
-              <Grid item xs={12} sm={4} md>
+              <Grid item xs={6} sm={4} md>
                 <Typography className={classes.tabItem} variant="body2">
                   Trang sức
                 </Typography>
               </Grid>
-              <Grid item xs={12} sm={4} md>
+              <Grid item xs={6} sm={4} md>
                 <Typography className={classes.tabItem} variant="body2">
                   Quà Tặng
                 </Typography>

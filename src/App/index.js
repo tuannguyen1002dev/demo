@@ -10,6 +10,7 @@ import PageNotFound from './PageNotFound';
 import Contact from './pages/Contact';
 import Cart from './pages/Cart';
 import ProductDetails from './pages/ProductDetails';
+import NewsDetails from './pages/NewsDetails'
 
 function HomePage() {
   return (
@@ -19,10 +20,10 @@ function HomePage() {
       <Route path="/introduce" component={Introduce} />
       <Route path="/products" component={Products} />
       <Route path="/news" component={News} />
-      <Route path="/page-not-found" component={PageNotFound} />
       <Route path="/contact" component={Contact} />
       <Route path="/cart" component={Cart} />
       <Route path="/product-details" component={ProductDetails} />
+      <Route path="/news-details" component={NewsDetails} />
       <Footer />
     </Router>
   );
